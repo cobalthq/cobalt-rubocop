@@ -1,0 +1,25 @@
+require:
+  - rubocop-rspec
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+RSpec/VariableName:
+  IgnoredPatterns:
+    - ^Authorization
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 17
+
+RSpec/NamedSubject:
+  Enabled: true
+
+RSpec/NestedGroups:
+  Max: 5
