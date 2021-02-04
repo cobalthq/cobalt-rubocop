@@ -8,7 +8,7 @@ This repository provides recommended linting rules for Ruby repositories.
 
 ```ruby
 group :development do
-  gem "cobalt-rubocop", require: false, git: https://github.com/cobalthq/cobalt-rubocop
+  gem "cobalt-rubocop", require: false, git: 'https://github.com/cobalthq/cobalt-rubocop', branch: :main
 end
 ```
 
