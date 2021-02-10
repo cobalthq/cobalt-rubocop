@@ -59,6 +59,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  bundler (= 2.2.2)
   cobalt-rubocop!
 
 BUNDLED WITH
