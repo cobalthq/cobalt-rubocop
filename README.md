@@ -1,19 +1,37 @@
 # Cobalt RuboCop
+[![Gem Version](https://badge.fury.io/rb/cobalt-rubocop.svg)](https://badge.fury.io/rb/cobalt-rubocop)
+[![GitHub License](https://img.shields.io/github/license/cobalthq/cobalt-rubocop.svg)](https://github.com/cobalthq/cobalt-rubocop/blob/main/LICENSE)
+![Gem Downloads](https://img.shields.io/gem/dt/cobalt-rubocop)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
 
 This repository provides recommended linting rules for Ruby repositories.
 
 ## Installation
 
 ### Gemfile
+#### Add
+  ```ruby
+  group :development do
+    gem 'cobalt-rubocop', require: false
+  end
+  ```
 
-```ruby
-group :development do
-  gem 'cobalt-rubocop', require: false, git: 'https://github.com/cobalthq/cobalt-rubocop', branch: :main
-end
-```
+#### Remove
+  ```ruby
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+  ```
+
+  [Specific versions](https://github.com/cobalthq/cobalt-rubocop/blob/main/cobalt-rubocop.gemspec) installed for:
+  - `rubocop`
+  - `rubocop-performance`
+  - `rubocop-rails`
+  - `rubocop-rspec`
 
 ### .rubocop.yml
-
+Configuration Options:
 ```yaml
 inherit_gem:
   cobalt-rubocop:
