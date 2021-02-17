@@ -1,1 +1,3 @@
-inherit_from: config/default.yml
+inherit_from:
+  - config/default.yml
+  - config/rspec.yml

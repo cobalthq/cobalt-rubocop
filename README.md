@@ -59,6 +59,32 @@ The number of offences can be counted:
 grep "Offense count" .rubocop_todo.yml | awk -F: '{sum+=$2} END {print sum}'
 ```
 
+## Custom Cops
+### InsecureHashAlgorithm
+See [Ruby Docs](https://ruby-doc.org/stdlib-2.7.2/libdoc/openssl/rdoc/OpenSSL/Digest.html) for built in hash functions.
+
+- Default Configuration:
+  ```yml
+  Cobalt/InsecureHashAlgorithm:
+    Allowed:
+      - SHA256
+      - SHA384
+      - SHA512
+  ```
+
+  ```ruby
+  # bad
+  OpenSSL::Digest::MD5.digest('abc')
+  OpenSSL::Digest::SHA1.digest('abc')
+  OpenSSL::HMAC.new('abc', 'sha1')
+
+  # good
+  OpenSSL::Digest::SHA256.digest('abc')
+  OpenSSL::Digest::SHA384.digest('abc')
+  OpenSSL::Digest::SHA512.digest('abc')
+  OpenSSL::HMAC.new('abc', 'sha256')
+  ```
+
 ## Development
 ```shell
 git clone git@github.com:cobalthq/cobalt-rubocop.git

@@ -18,6 +18,7 @@ GEM
       zeitwerk (~> 2.3)
     ast (2.4.2)
     concurrent-ruby (1.1.8)
+    diff-lcs (1.4.4)
     i18n (1.8.8)
       concurrent-ruby (~> 1.0)
     minitest (5.14.3)
@@ -28,6 +29,19 @@ GEM
     rainbow (3.0.0)
     regexp_parser (2.0.3)
     rexml (3.2.4)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.1)
     rubocop (1.9.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
@@ -61,6 +75,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (= 2.2.2)
   cobalt-rubocop!
+  rspec (= 3.10.0)
 
 BUNDLED WITH
    2.2.2

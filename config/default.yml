@@ -1,5 +1,6 @@
 require:
   - rubocop-performance
+  - rubocop/cop/cobalt
 
 AllCops:
   NewCops: enable
@@ -57,3 +58,6 @@ Style/IfUnlessModifier:
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: nested
+
+Cobalt/InsecureHashAlgorithm:
+  Enabled: true
