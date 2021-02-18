@@ -99,10 +99,14 @@ In your application, use the `path` attribute to point to your local copy of the
   gem 'cobalt-rubocop', path: '../cobalt-rubocop', require: false
 ```
 
-### Publishing the gem
-If you have access to publish the gem on rubygems:
-```shell
-rake build
-cd pkg
-gem push cobalt-rubocop-<version_number>.gem
-```
+Alternatively:
+- `rake build`
+- `gem install pkg/cobalt-rubocop-<version_number>.gem`
+
+## Publish (internal)
+> Note: Publishing a new version of this gem is only meant for maintainers.
+- Ensure you have access to publish on [rubygems](https://rubygems.org/gems/cobalt-rubocop).
+- Update [CHANGELOG](https://github.com/cobalthq/cobalt-rubocop/blob/main/CHANGELOG.md).
+- Update [`VERSION`](https://github.com/cobalthq/cobalt-rubocop/blob/main/lib/rubocop/cobalt/version.rb).
+- `rake release`
+  - This command builds the gem, creates a tag and publishes to rubygems, see [bundler docs](https://bundler.io/guides/creating_gem.html#releasing-the-gem).
