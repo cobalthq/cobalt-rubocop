@@ -14,7 +14,7 @@ RSpec/MessageSpies:
 RSpec/VariableName:
   IgnoredPatterns:
     - ^Authorization
-    - '\[\]$' # For array parameters in rswag `let(:'<parameter_name>[]')` is necessary
+    - '\[\]$' # For array parameters in rswag like `let(:'<parameter_name>[]')`
 
 RSpec/MultipleMemoizedHelpers:
   Max: 17
