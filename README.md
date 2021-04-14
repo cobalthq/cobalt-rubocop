@@ -25,10 +25,10 @@ This repository provides recommended linting rules for Ruby repositories.
   ```
 
   [Specific versions](https://github.com/cobalthq/cobalt-rubocop/blob/main/cobalt-rubocop.gemspec) installed for:
-  - `rubocop`
-  - `rubocop-performance`
-  - `rubocop-rails`
-  - `rubocop-rspec`
+  - [rubocop](https://github.com/rubocop-hq/rubocop)
+  - [rubocop-performance](https://github.com/rubocop/rubocop-performance)
+  - [rubocop-rails](https://github.com/rubocop/rubocop-rails)
+  - [rubocop-rspec](https://github.com/rubocop/rubocop-rspec)
 
 ### .rubocop.yml
 Configuration Options:
@@ -88,8 +88,8 @@ See [Ruby Docs](https://ruby-doc.org/stdlib-2.7.2/libdoc/openssl/rdoc/OpenSSL/Di
 ## Development
 ```shell
 git clone git@github.com:cobalthq/cobalt-rubocop.git
-gem install bundler:2.2.2
-bundle _2.2.2_
+gem install bundler:2.2.16
+bundle _2.2.16_
 ```
 
 ### Testing locally
