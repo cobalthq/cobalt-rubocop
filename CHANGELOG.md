@@ -1,5 +1,8 @@
 # CHANGELOG
 ## main (unreleased)
+*
+
+## 0.3.0 (2021-04-16)
 * Update Rubocop and Rubocop Performance versions ([#6](https://github.com/cobalthq/cobalt-rubocop/pull/6))
 
 ## 0.2.0 (2021-04-14)
