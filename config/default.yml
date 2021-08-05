@@ -35,10 +35,16 @@ Layout/MultilineMethodCallIndentation:
 Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
-Metrics/MethodLength:
-  Max: 20
-
 Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
   Enabled: false
 
 Style/Documentation:
