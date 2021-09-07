@@ -2,6 +2,9 @@
 ## main (unreleased)
 *
 
+## 0.4.0 (2021-09-07)
+* Update Gem versions ([#6](https://github.com/cobalthq/cobalt-rubocop/pull/7))
+
 ## 0.3.0 (2021-04-16)
 * Update Rubocop and Rubocop Performance versions ([#6](https://github.com/cobalthq/cobalt-rubocop/pull/6))
 
