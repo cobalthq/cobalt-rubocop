@@ -1,5 +1,8 @@
 # CHANGELOG
 ## main (unreleased)
+* WIP
+
+## 0.5.0 (2022-01-25)
 * Update Gem versions ([#8](https://github.com/cobalthq/cobalt-rubocop/pull/8))
 
 ## 0.4.0 (2021-09-07)
