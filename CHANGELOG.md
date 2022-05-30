@@ -2,6 +2,9 @@
 ## main (unreleased)
 * WIP
 
+## 0.5.1 (2022-05-30)
+* Bump rack to 2.2.3.1 to fix for CVE-2022-30122 and CVE-2022-30123
+
 ## 0.5.0 (2022-01-25)
 * Update Gem versions ([#8](https://github.com/cobalthq/cobalt-rubocop/pull/8))
 
