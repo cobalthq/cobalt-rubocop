@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.metadata['homepage_uri'] = s.homepage
   s.metadata['source_code_uri'] = s.homepage
   s.metadata['changelog_uri'] = "#{s.homepage}/blob/main/CHANGELOG.md"
+  s.metadata['rubygems_mfa_required'] = 'true'
 
   s.files = Dir['README.md', 'LICENSE', 'CHANGELOG.md', 'config/*.yml', 'lib/**/*.rb']
   s.required_ruby_version = '>= 2.5.0'
