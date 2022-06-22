@@ -1,6 +1,6 @@
 # CHANGELOG
 ## main (unreleased)
-* WIP
+* Security: Require Multi-Factor Authentication for RubyGems privileged operations ([#16](https://github.com/cobalthq/cobalt-rubocop/pull/10))
 
 ## 0.5.0 (2022-01-25)
 * Update Gem versions ([#8](https://github.com/cobalthq/cobalt-rubocop/pull/8))
