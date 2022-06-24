@@ -88,8 +88,7 @@ See [Ruby Docs](https://ruby-doc.org/stdlib-2.7.2/libdoc/openssl/rdoc/OpenSSL/Di
 ## Development
 ```shell
 git clone git@github.com:cobalthq/cobalt-rubocop.git
-gem install bundler:2.2.16
-bundle _2.2.16_
+bundle install
 ```
 
 ### Testing locally
