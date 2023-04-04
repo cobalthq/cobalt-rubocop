@@ -21,10 +21,10 @@ Gem::Specification.new do |s|
   s.files = Dir['README.md', 'LICENSE', 'CHANGELOG.md', 'config/*.yml', 'lib/**/*.rb']
   s.required_ruby_version = '>= 2.5.0'
 
-  s.add_dependency 'rubocop', '1.35.1'
-  s.add_dependency 'rubocop-performance', '1.14.3'
-  s.add_dependency 'rubocop-rails', '2.15.2'
-  s.add_dependency 'rubocop-rspec', '2.12.1'
+  s.add_dependency 'rubocop', '~> 1.30'
+  s.add_dependency 'rubocop-performance', '~> 1.14'
+  s.add_dependency 'rubocop-rails', '~> 2.15'
+  s.add_dependency 'rubocop-rspec', '~> 2.11'
 
-  s.add_development_dependency 'rspec', '3.11.0'
+  s.add_development_dependency 'rspec', '~> 3.10'
 end
