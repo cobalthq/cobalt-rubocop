@@ -41,23 +41,26 @@ Metrics/MethodLength:
 Metrics/AbcSize:
   Enabled: false
 
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
 Style/Documentation:
   Enabled: false
 
 Style/EachWithObject:
   Enabled: false
 
-Style/MutableConstant:
-  Enabled: false
-
 Style/GuardClause:
   Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: consistent
 
 Style/IfUnlessModifier:
   Enabled: false
 
-Style/ClassAndModuleChildren:
-  EnforcedStyle: nested
-
 Cobalt/InsecureHashAlgorithm:
   Enabled: true
+
+Style/MutableConstant:
+  Enabled: false

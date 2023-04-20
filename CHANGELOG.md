@@ -1,6 +1,9 @@
 # CHANGELOG
 ## main (unreleased)
 
+## 0.9.0 (2023-04-20)
+* Allow either hash syntax (legacy vs 3.1) as long as the use is consistent.
+
 ## 0.8.0 (2023-04-04)
 * Relax dependency versions
 
