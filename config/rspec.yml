@@ -12,7 +12,7 @@ RSpec/MessageSpies:
   EnforcedStyle: receive
 
 RSpec/VariableName:
-  AllowedPatterns:
+  IgnoredPatterns:
     - ^Authorization
     - '\[\]$' # For array parameters in rswag like `let(:'<parameter_name>[]')`
 
