@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.metadata['rubygems_mfa_required'] = 'true'
 
   s.files = Dir['README.md', 'LICENSE', 'CHANGELOG.md', 'config/*.yml', 'lib/**/*.rb']
-  s.required_ruby_version = '>= 2.5.0'
+  s.required_ruby_version = '>= 3.2.0'
 
   s.add_dependency 'rubocop', '~> 1.30'
   s.add_dependency 'rubocop-performance', '~> 1.14'

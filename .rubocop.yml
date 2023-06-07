@@ -1,3 +1,6 @@
 inherit_from:
   - config/default.yml
   - config/rspec.yml
+
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec

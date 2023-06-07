@@ -8,13 +8,14 @@ Metrics/BlockLength:
 RSpec/ExampleLength:
   Enabled: false
 
+RSpec/IndexedLet:
+  Enabled: false
+
+RSpec/Rails/InferredSpecType:
+  Enabled: false
+
 RSpec/MessageSpies:
   EnforcedStyle: receive
-
-RSpec/VariableName:
-  AllowedPatterns:
-    - ^Authorization
-    - '\[\]$' # For array parameters in rswag like `let(:'<parameter_name>[]')`
 
 RSpec/MultipleMemoizedHelpers:
   Max: 17
@@ -24,3 +25,8 @@ RSpec/NamedSubject:
 
 RSpec/NestedGroups:
   Max: 5
+
+RSpec/VariableName:
+  AllowedPatterns:
+    - ^Authorization
+    - '\[\]$' # For array parameters in rswag like `let(:'<parameter_name>[]')`
