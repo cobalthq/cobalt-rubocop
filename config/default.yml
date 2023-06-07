@@ -5,8 +5,8 @@ require:
 AllCops:
   NewCops: enable
 
-Naming/MethodName:
-  EnforcedStyle: snake_case
+Cobalt/InsecureHashAlgorithm:
+  Enabled: true
 
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
@@ -17,11 +17,11 @@ Layout/DotPosition:
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
 Layout/LineLength:
   Enabled: false
-
-Layout/ParameterAlignment:
-  EnforcedStyle: with_fixed_indentation
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
@@ -32,14 +32,17 @@ Layout/MultilineOperationIndentation:
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Layout/FirstHashElementIndentation:
-  EnforcedStyle: consistent
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Metrics/AbcSize:
+  Enabled: false
 
 Metrics/MethodLength:
   Max: 20
 
-Metrics/AbcSize:
-  Enabled: false
+Naming/MethodName:
+  EnforcedStyle: snake_case
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: nested
@@ -59,8 +62,8 @@ Style/HashSyntax:
 Style/IfUnlessModifier:
   Enabled: false
 
-Cobalt/InsecureHashAlgorithm:
-  Enabled: true
-
 Style/MutableConstant:
+  Enabled: false
+
+Style/RedundantConstantBase:
   Enabled: false
