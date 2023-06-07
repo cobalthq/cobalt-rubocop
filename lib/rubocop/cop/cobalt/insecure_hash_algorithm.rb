@@ -103,16 +103,18 @@ module RuboCop
           add_offense(const_node, message: default_message) if insecure_const?(const_node) && !digest_uuid?(const_node)
         end
 
+        # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
         def on_send(send_node)
           if uuid_v3?(send_node) && !allowed_hash_functions.include?('md5')
             add_offense(send_node, message: "uuid_v3 uses MD5, which is not allowed. Prefer: #{allowed_hash_functions.join(', ')}")
           elsif uuid_v5?(send_node) && !allowed_hash_functions.include?('sha1')
             add_offense(send_node, message: "uuid_v5 uses SHA1, which is not allowed. Prefer: #{allowed_hash_functions.join(', ')}")
-          elsif openssl_hmac_new?(send_node) && openssl_hmac_new_insecure?(send_node) ||
+          elsif (openssl_hmac_new?(send_node) && openssl_hmac_new_insecure?(send_node)) ||
               insecure_digest?(send_node) || insecure_hash_lookup?(send_node)
             add_offense(send_node, message: default_message)
           end
         end
+        # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
         def default_message
           "This hash function is not allowed. Prefer: #{allowed_hash_functions.join(', ')}"
