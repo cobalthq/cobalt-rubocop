@@ -2,6 +2,11 @@
 
 ## main (unreleased)
 
+* Maintenance:
+  * Add CI status checks
+  * Add dependabot
+  * Add required CI checks for IaaC setup
+
 ## 1.0.0 (2023-06-09)
 
 * Bump required ruby version to 3.2.x
