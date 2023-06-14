@@ -10,10 +10,8 @@ updates:
     commit-message:
       prefix: "github-actions"
     open-pull-requests-limit: 5
-  - package-ecosystem: "bundler" # See documentation for possible values
-    directory: "/" # Location of package manifests
-    registries:
-      - rubygems
+  - package-ecosystem: "bundler"
+    directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
