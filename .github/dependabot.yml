@@ -7,4 +7,18 @@ updates:
       day: "wednesday"
       time: "09:30"
       timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "github-actions"
+    open-pull-requests-limit: 5
+  - package-ecosystem: "bundler" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    registries:
+      - rubygems
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:30"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "bundler"
     open-pull-requests-limit: 5
