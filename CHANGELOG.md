@@ -2,6 +2,9 @@
 
 ## main (unreleased)
 
+## 1.1.0 (2023-07-06)
+
+* Don't lint code inside `vendor` folders
 * Maintenance:
   * Add CI status checks
   * Add dependabot
