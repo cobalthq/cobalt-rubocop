@@ -26,6 +26,12 @@ RSpec/NamedSubject:
 RSpec/NestedGroups:
   Max: 5
 
+# This cop does not correctly detect that RSwag creates
+# extra contexts, reporting false positives for those tests
+RSpec/ScatteredSetup:
+  Exclude:
+    - '{components/*/,}spec/api/**/*'
+
 RSpec/VariableName:
   AllowedPatterns:
     - ^Authorization
