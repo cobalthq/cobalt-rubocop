@@ -2,6 +2,12 @@
 
 ## main (unreleased)
 
+## 1.0.1 (2023-07-13)
+
+* Disable `RSpec/ScatteredSetup` for specs inside `/api`, since it
+incorrectly thinks that separate `before` blocks can be put together for
+RSwag specs
+
 * Maintenance:
   * Add CI status checks
   * Add dependabot
