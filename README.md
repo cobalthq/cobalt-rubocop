@@ -5,7 +5,18 @@
 ![Gem Downloads](https://img.shields.io/gem/dt/cobalt-rubocop)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
 
+## Description
+
 This repository provides recommended linting rules for Ruby repositories.
+
+## Contributing
+
+If you wish to contribute, please check our guidelines in
+[CONTRIBUTING.md]
+
+## Who to ask for help
+
+Ask the [CODEOWNERS]
 
 ## Installation
 
@@ -28,12 +39,12 @@ gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
 ```
 
-[Specific versions](https://github.com/cobalthq/cobalt-rubocop/blob/main/cobalt-rubocop.gemspec) installed for:
+[Specific versions] installed for:
 
-- [rubocop](https://github.com/rubocop-hq/rubocop)
-- [rubocop-performance](https://github.com/rubocop/rubocop-performance)
-- [rubocop-rails](https://github.com/rubocop/rubocop-rails)
-- [rubocop-rspec](https://github.com/rubocop/rubocop-rspec)
+- [rubocop]
+- [rubocop-performance]
+- [rubocop-rails]
+- [rubocop-rspec]
 
 ### .rubocop.yml
 
@@ -66,62 +77,12 @@ The number of offences can be counted:
 grep "Offense count" .rubocop_todo.yml | awk -F: '{sum+=$2} END {print sum}'
 ```
 
-## Custom Cops
+<!-- Links -->
 
-### InsecureHashAlgorithm
-
-See [Ruby Docs](https://ruby-doc.org/stdlib-2.7.2/libdoc/openssl/rdoc/OpenSSL/Digest.html) for built in hash functions.
-
-- Default Configuration:
-
-  ```yml
-  Cobalt/InsecureHashAlgorithm:
-    Allowed:
-      - SHA256
-      - SHA384
-      - SHA512
-  ```
-
-  ```ruby
-  # bad
-  OpenSSL::Digest::MD5.digest('abc')
-  OpenSSL::Digest::SHA1.digest('abc')
-  OpenSSL::HMAC.new('abc', 'sha1')
-
-  # good
-  OpenSSL::Digest::SHA256.digest('abc')
-  OpenSSL::Digest::SHA384.digest('abc')
-  OpenSSL::Digest::SHA512.digest('abc')
-  OpenSSL::HMAC.new('abc', 'sha256')
-  ```
-
-## Development
-
-```shell
-git clone git@github.com:cobalthq/cobalt-rubocop.git
-bundle install
-```
-
-### Testing locally
-
-In your application, use the `path` attribute to point to your local copy of the gem
-
-```ruby
-  # Use the relative path from your application, to the cobalt-rubocop folder
-  gem 'cobalt-rubocop', path: '../cobalt-rubocop', require: false
-```
-
-Alternatively:
-
-- `rake build`
-- `gem install pkg/cobalt-rubocop-<version_number>.gem`
-
-## Publish (internal)
-
-> Note: Publishing a new version of this gem is only meant for maintainers.
-
-- Ensure you have access to publish on [rubygems](https://rubygems.org/gems/cobalt-rubocop).
-- Update [CHANGELOG](https://github.com/cobalthq/cobalt-rubocop/blob/main/CHANGELOG.md).
-- Update [`VERSION`](https://github.com/cobalthq/cobalt-rubocop/blob/main/lib/rubocop/cobalt/version.rb).
-- `rake release`
-  - This command builds the gem, creates a tag and publishes to rubygems, see [bundler docs](https://bundler.io/guides/creating_gem.html#releasing-the-gem).
+[CODEOWNERS]: ./CODEOWNERS
+[CONTRIBUTING.md]: ./CONTRIBUTING.md
+[Specific versions]: ./cobalt-rubocop.gemspec
+[rubocop-performance]: https://github.com/rubocop/rubocop-performance
+[rubocop-rails]: https://github.com/rubocop/rubocop-rails
+[rubocop-rspec]: https://github.com/rubocop/rubocop-rspec
+[rubocop]: https://github.com/rubocop-hq/rubocop
