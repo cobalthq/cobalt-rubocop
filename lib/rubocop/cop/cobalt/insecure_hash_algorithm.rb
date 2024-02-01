@@ -77,10 +77,13 @@ module RuboCop
           %i[hexencode bubblebabble].include?(val)
         end
 
+        # SHA3-256 is designated as secure by
+        # https://github.com/cobalthq/cobalt-pentest-api/blob/main/docs/adr/0019_hash_api_tokens.md
         DEFAULT_ALLOWED = %w[
           SHA256
           SHA384
           SHA512
+          SHA3-256
         ].freeze
 
         def allowed_hash_functions
