@@ -2,6 +2,10 @@
 
 ## main (unreleased)
 
+## 1.0.2 (2024-02-01)
+
+* Designate SHA3-256 as a secure hashing algorithm
+
 ## 1.0.1 (2023-07-13)
 
 * Disable `RSpec/ScatteredSetup` for specs inside `/api`, since it
