@@ -343,7 +343,7 @@ RSpec.describe RuboCop::Cop::Cobalt::InsecureHashAlgorithm, :config do
         class Foo
           def bar
             Digest::UUID.uuid_v3('anything', 'anything')
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ uuid_v3 uses MD5, which is not allowed. Prefer: sha256, sha384, sha512
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ uuid_v3 uses MD5, which is not allowed. Prefer: sha256, sha384, sha512, sha3-256
           end
         end
       RUBY
@@ -382,7 +382,7 @@ RSpec.describe RuboCop::Cop::Cobalt::InsecureHashAlgorithm, :config do
         class Foo
           def bar
             Digest::UUID.uuid_v5('anything', 'anything')
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ uuid_v5 uses SHA1, which is not allowed. Prefer: sha256, sha384, sha512
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ uuid_v5 uses SHA1, which is not allowed. Prefer: sha256, sha384, sha512, sha3-256
           end
         end
       RUBY
