@@ -7,6 +7,7 @@ We provide the following guidelines to make the contribution process easy
 and effective for everyone involved.
 
 ## Signed Commits
+
 In this repositiory we enforce [signing commits with GPG signature](https://zombie.atlassian.net/wiki/spaces/ENG/pages/2387312988).
 
 ## PR Branch Naming
@@ -29,37 +30,37 @@ in CAPITAL LETTERS.
 
 Include one of the following categories as a preface for the branch name:
 
-* `feature` — Add new functionality, implement new features, create new user
+- `feature` — Add new functionality, implement new features, create new user
   scenarios;
-* `fix` — Fix a bug, security issue, or incorrect behavior;
-* `chore` or `maintenance` — Refactor, change implementation details, update
+- `fix` — Fix a bug, security issue, or incorrect behavior;
+- `chore` or `maintenance` — Refactor, change implementation details, update
   multiple dependencies in one go;
-* `docs` — (may use `NO-TICKET`, except for doc repositories) — Update
+- `docs` — (may use `NO-TICKET`, except for doc repositories) — Update
   documentation;
-* `revert-NNN-` — Automated prefix from GitHub when reverting a PR. Assume
+- `revert-NNN-` — Automated prefix from GitHub when reverting a PR. Assume
   that the PR being reverted was merged and already passed branch name check;
-* `dependabot` — Update dependencies. Breaks branch naming rules (April 2022).
-* `snyk-upgrade` — Update dependencies. Breaks branch naming rules (April 2022).
-  We allow dependabot merges *without a ticket* as long as it does not
+- `dependabot` — Update dependencies. Breaks branch naming rules (April 2022).
+- `snyk-upgrade` — Update dependencies. Breaks branch naming rules (April 2022).
+  We allow dependabot merges _without a ticket_ as long as it does not
   break anything
 
 #### Good
 
-* `fix/PX-1234/ensure-bids-ac` <!--- branch-name pass -->
-* `docs/NO-TICKET/fix-typo` <!--- branch-name pass -->
-* `maintenance/PX-3455/update-spring` <!--- branch-name pass -->
-* `revert-123-anything/was/already-merged` <!--- branch-name pass -->
-* `dependabot/whatever/version-1.2.3` <!--- branch-name pass -->
-* `snyk-upgrade-1234567abcdef` <!--- branch-name pass -->
-* `chore/INFRA-1234/Anything_At_All-1.0.1` <!--- branch-name pass -->
+- `fix/PX-1234/ensure-bids-ac` <!--- branch-name pass -->
+- `docs/NO-TICKET/fix-typo` <!--- branch-name pass -->
+- `maintenance/PX-3455/update-spring` <!--- branch-name pass -->
+- `revert-123-anything/was/already-merged` <!--- branch-name pass -->
+- `dependabot/whatever/version-1.2.3` <!--- branch-name pass -->
+- `snyk-upgrade-1234567abcdef` <!--- branch-name pass -->
+- `chore/INFRA-1234/Anything_At_All-1.0.1` <!--- branch-name pass -->
 
 #### Bad
 
-| Example                                   | Problem                                                        |
-|-------------------------------------------|----------------------------------------------------------------|
-| `chore/px-1345/implement-cookie-check`    | Ticket ID is in lower case (should be `PX-1345`)               | <!--- branch-name fail -->
-| `docs/no-ticket/add-linting-section`      | No ticket is in lower case (should be `NO-TICKET`)             | <!--- branch-name fail -->
-| `feature/NO-TICKET/allow-delete-bids`     | `feature` changes require a ticket                        | <!--- branch-name fail -->
+| Example                                | Problem                                            |
+| -------------------------------------- | -------------------------------------------------- | -------------------------- |
+| `chore/px-1345/implement-cookie-check` | Ticket ID is in lower case (should be `PX-1345`)   | <!--- branch-name fail --> |
+| `docs/no-ticket/add-linting-section`   | No ticket is in lower case (should be `NO-TICKET`) | <!--- branch-name fail --> |
+| `feature/NO-TICKET/allow-delete-bids`  | `feature` changes require a ticket                 | <!--- branch-name fail --> |
 
 ## Testing
 
@@ -120,28 +121,22 @@ It is possible to add custom cops to rubocop. One example is `InsecureHashAlgori
   OpenSSL::HMAC.new('abc', 'sha256')
   ```
 
-
 ## Adding dependencies
 
 Project dependencies should be available under a license in accordance
 with Cobalt's OSS license policy.
 
-## Publish (internal)
+## Publish
 
 > Note: Publishing a new version of this gem is only meant for maintainers.
+> It is automated with GitHub Actions.
 
-- Ensure you have access to publish on [rubygems].
 - Update [CHANGELOG]
 - Update [`VERSION`].
-- `rake release`
-  - This command builds the gem, creates a tag and publishes to rubygems, see [bundler docs].
 
 <!-- Links -->
 
 [CHANGELOG]: ./CHANGELOG.md
-[GitHub Workflows]: ./.github/workflows
 [Ruby docs]: https://ruby-doc.org/stdlib-2.7.2/libdoc/openssl/rdoc/OpenSSL/Digest.html
 [`VERSION`]: ./lib/rubocop/cobalt/version.rb
-[bundler docs]: https://bundler.io/guides/creating_gem.html#releasing-the-gem
-[rubygems]: https://rubygems.org/gems/cobalt-rubocop
 [config/]: ./config
