@@ -1,0 +1,32 @@
+name: "Deploy Gem"
+on:
+  push:
+    tags:
+      - "**" # Matches all tags
+    branches:
+      - main # Only main
+jobs:
+  publish:
+    runs-on: ubuntu-latest.
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
+      - name: Gem build
+        run: |
+          gem build cobalt-rubocop.gemspec -o cobalt-rubocop.gem
+      - name: Gem publish
+        run: |
+          touch ~/.gem/credentials
+          echo ":github: Bearer ${{github.token}}" > ~/.gem/credentials
+          chmod 0600 ~/.gem/credentials
+          gem push --key github --host https://rubygems.pkg.github.com/cobalthq cobalt-rubocop.gem
