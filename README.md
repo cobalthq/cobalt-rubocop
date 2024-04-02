@@ -25,8 +25,10 @@ Ask the [CODEOWNERS]
 #### Add
 
 ```ruby
-group :development do
-  gem 'cobalt-rubocop', require: false
+source 'https://rubygems.pkg.github.com/cobalthq' do
+  group :development do
+    gem 'cobalt-rubocop', require: false
+  end
 end
 ```
 
@@ -53,9 +55,9 @@ Configuration Options:
 ```yaml
 inherit_gem:
   cobalt-rubocop:
-    - 'config/default.yml'
-    - 'config/rails.yml'
-    - 'config/rspec.yml'
+    - "config/default.yml"
+    - "config/rails.yml"
+    - "config/rspec.yml"
 ```
 
 ## Usage
