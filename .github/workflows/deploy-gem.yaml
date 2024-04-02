@@ -26,6 +26,7 @@ jobs:
           gem build cobalt-rubocop.gemspec -o cobalt-rubocop.gem
       - name: Gem publish
         run: |
+          mkdir -p ~/.gem
           touch ~/.gem/credentials
           echo ":github: Bearer ${{github.token}}" > ~/.gem/credentials
           chmod 0600 ~/.gem/credentials
