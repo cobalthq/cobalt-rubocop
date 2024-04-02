@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.metadata['allowed_push_host'] = 'https://rubygems.pkg.github.com'
+  s.metadata['github_repo'] = 'ssh://github.com/cobalthq/cobalt-rubocop.git'
   s.metadata['homepage_uri'] = s.homepage
   s.metadata['source_code_uri'] = s.homepage
   s.metadata['changelog_uri'] = "#{s.homepage}/blob/main/CHANGELOG.md"
