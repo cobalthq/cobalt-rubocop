@@ -7,7 +7,7 @@ on:
       - main # Only main
 jobs:
   publish:
-    runs-on: ubuntu-latest.
+    runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
