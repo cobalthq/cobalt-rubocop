@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.metadata['allowed_push_host'] = 'https://rubygems.pkg.github.com'
+  s.metadata['changelog_uri'] = "#{s.homepage}/blob/main/CHANGELOG.md"
   s.metadata['github_repo'] = 'ssh://github.com/cobalthq/cobalt-rubocop.git'
   s.metadata['homepage_uri'] = s.homepage
-  s.metadata['source_code_uri'] = s.homepage
-  s.metadata['changelog_uri'] = "#{s.homepage}/blob/main/CHANGELOG.md"
   s.metadata['rubygems_mfa_required'] = 'true'
+  s.metadata['source_code_uri'] = s.homepage
 
   s.files = Dir['README.md', 'LICENSE', 'CHANGELOG.md', 'config/*.yml', 'lib/**/*.rb']
   s.required_ruby_version = '>= 3.2.0'
