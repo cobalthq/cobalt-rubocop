@@ -2,6 +2,10 @@
 
 ## main (unreleased)
 
+## 1.0.3 (2024-05-29)
+
+* Address warning `RSpec/Rails/InferredSpecType has the wrong namespace - should be RSpecRails`.
+
 ## 1.0.2 (2024-02-01)
 
 * Designate SHA3-256 as a secure hashing algorithm
