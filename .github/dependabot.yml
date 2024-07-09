@@ -10,6 +10,8 @@ updates:
     commit-message:
       prefix: "github-actions"
     open-pull-requests-limit: 5
+    assignees:
+      - "TaylorBriggs"
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
@@ -20,3 +22,5 @@ updates:
     commit-message:
       prefix: "bundler"
     open-pull-requests-limit: 5
+    assignees:
+      - "TaylorBriggs"
