@@ -2,6 +2,10 @@
 
 ## main (unreleased)
 
+## 1.0.4 (2024-07-09)
+
+* Update dependency rubocop-rspec to v3
+
 ## 1.0.3 (2024-05-29)
 
 * Address warning `RSpec/Rails/InferredSpecType has the wrong namespace - should be RSpecRails`.
