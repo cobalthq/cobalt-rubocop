@@ -5,7 +5,7 @@
 module RuboCop
   module Cop
     module Cobalt
-      class InsecureHashAlgorithm < Cop
+      class InsecureHashAlgorithm < Base
         # Matches constants like these:
         #   Digest::MD5
         #   OpenSSL::Digest::MD5

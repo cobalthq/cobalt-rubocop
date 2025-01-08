@@ -2,6 +2,10 @@
 
 ## main (unreleased)
 
+## 1.0.5 (2025-01-06)
+
+* Fix deprecating warning regarding `Rubocop::Cop::Cop`
+
 ## 1.0.4 (2024-07-09)
 
 * Update dependency rubocop-rspec to v3
